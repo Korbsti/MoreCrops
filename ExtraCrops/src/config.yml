@@ -1,0 +1,218 @@
+# - - - - - - - - - - #
+#                     #
+#      More Crops     #
+#        0.0.1        #
+#                     #
+# - - - - - - - - - - #
+
+# potionEffects first argument being the potion effect, second being the length, third being the amplifier
+# Want to add your own crop?
+#    Corn:
+#       displayName: '' <- display name of the crop
+#       id: 104044 <- ID of the CROP, always keep each ID different from each crop
+#       growthSpeed: 1 <- growth speed
+#       growthPerStage: 10 <- growth speed needed per stage
+#       stageAmount: 2 <- amount of stages there are
+#       underBlock: 'GRASS_BLOCK,DIRT' <- blocks the crop can be placed on
+#       dropAmount: 1 <- how many fully grown crops the crop drops
+#       hungerFeed: 4.0 <- how many hunger bars it fills when getting right clicked
+#       dropSeedAmount: 2 <- how many seeds are dropped from crop
+#       potionEffects: <- apply effects when eating the crop
+#          - 'null'
+#       textures: <- textures for each STAGE, example if there are 2 stages there should be 2 textures, if there are 3 textures then there should be 3 lines of textures
+#          - ''
+#          - ''
+# https://minecraft-heads.com/
+# SPEED
+# SLOW
+# FAST_DIGGING
+# SLOW_DIGGING
+# INCREASE_DAMAGE
+# HEAL
+# HARM
+# JUMP
+# CONFUSION
+# REGENERATION
+# DAMAGE_RESISTANCE
+# FIRE_RESISTANCE
+# WATER_BREATHING
+# INVISIBILITY
+# BLINDNESS
+# NIGHT_VISION
+# HUNGER
+# WEAKNESS
+# POISON
+# WITHER
+# HEALTH_BOOST
+# ABSORPTION
+# SATURATION
+# GLOWING
+# LEVITATION
+# LUCK
+# UNLUCK
+# SLOW_FALLING
+# CONDUIT_POWER
+# DOLPHINS_GRACE
+# BAD_OMEN
+# HERO_OF_THE_VILLAGE
+
+settings: 
+
+   updater: 300.0
+   
+   reCacheUpdater: 2400.0
+
+messages:
+   noPerm: '&4No Permission'
+   reload: '&2Reloaded Configuration'
+   recievedCrop: '&2Recieved {crop}'
+   giveCrop: '&2Given {amount} {crop} to specified player'
+   cropsList: '&2Known crops are: {crops}'
+   invalidArgs: '&4Invalid arguments'
+   nonPlayer: '&4Not a valid player'
+   cannotPlaceGrownCrop: '&2Woah there! You dont want to ruin the crop do you? You already ripped out the roots! (cannot place a grown crop on a block)'
+   cannotPlaceCropOnBlock: '&2Pretty sure this crop cannot grow there... perhaps try a different area..?'
+   purge: '&4Purged every known crop and wiped the data folder'
+   help:
+     - "&2MoreCrops Help Menu: "
+     - "&2/crops give [player] [crop] [amount]"
+     - "&2/crops help - this menu"
+     - "&2/crops list - lists every known crop"
+     - "&2/crops purge - wipe every known crop on the server and delete the data folder"
+crops:
+    Corn:
+       displayName: '&5Corn'
+       id: 104044
+       growthSpeed: 1
+       growthPerStage: 50
+       stageAmount: 2
+       underBlock: 'GRASS_BLOCK,DIRT'
+       dropAmount: 1
+       hungerFeed: 4.0
+       dropSeedAmount: 2
+       potionEffects:
+          - 'null'
+       textures:
+          - 'http://textures.minecraft.net/texture/7ecd6deb38025e322ceaec769f13551eaa8038c7fec31a85ce6d9417b1c76994'
+          - 'http://textures.minecraft.net/texture/d391dffbea2fc3f2ad78a623f49bf7e1121694112c3759feed4156fc2ba46c0'
+    BlueCorn:
+       displayName: '&5BlueCorn'
+       id: 104005
+       growthSpeed: 1
+       growthPerStage: 60
+       stageAmount: 2
+       underBlock: 'GRASS_BLOCK,DIRT'
+       dropAmount: 1
+       hungerFeed: 6.0
+       dropSeedAmount: 2
+       potionEffects:
+          - 'REGENERATION 10 10'
+       textures:
+          - 'http://textures.minecraft.net/texture/7ecd6deb38025e322ceaec769f13551eaa8038c7fec31a85ce6d9417b1c76994'
+          - 'http://textures.minecraft.net/texture/fd541581b0d24b1b5ab1dad4f51e383d03b9b0bcb4cf86f1345145468efd1c5a'
+    RedCorn:
+       displayName: '&5RedCorn'
+       id: 104006
+       growthSpeed: 1
+       growthPerStage: 50
+       stageAmount: 2
+       underBlock: 'GRASS_BLOCK,DIRT'
+       dropAmount: 1
+       hungerFeed: 2.0
+       dropSeedAmount: 2
+       potionEffects:
+          - 'REGENERATION 30 30'
+       textures:
+          - 'http://textures.minecraft.net/texture/7ecd6deb38025e322ceaec769f13551eaa8038c7fec31a85ce6d9417b1c76994'
+          - 'http://textures.minecraft.net/texture/b920b5226b625bc0649c447dda0e268f1c486bd536c220e22992a328c5c27ac6'
+    RoeBerry:
+       displayName: '&3RoeBerry'
+       id: 104007
+       growthSpeed: 1
+       growthPerStage: 50
+       stageAmount: 2
+       underBlock: 'GRASS_BLOCK,DIRT'
+       dropAmount: 1
+       hungerFeed: 2.0
+       dropSeedAmount: 2
+       potionEffects:
+          - 'null'
+       textures:
+          - 'http://textures.minecraft.net/texture/bbdae8046ef894cce581d36825dd27750e5923775d239156fb6cf22d45552728'
+          - 'http://textures.minecraft.net/texture/847e9cb6508f079adbbcb4969c50d126e19cc94b9e8eb13b94e6e20bfba21ed1'
+    GreenOnion:
+       displayName: '&3Green Onion'
+       id: 104008
+       growthSpeed: 1
+       growthPerStage: 30
+       stageAmount: 2
+       underBlock: 'GRASS_BLOCK,DIRT'
+       dropAmount: 1
+       hungerFeed: 1.0
+       dropSeedAmount: 2
+       potionEffects:
+          - 'null'
+       textures:
+          - 'http://textures.minecraft.net/texture/a322314317df929c5a2ac51ffdb79bc40d742cd855dd5d1cced160e981bf1699'
+          - 'http://textures.minecraft.net/texture/c2dd5433db4fddebc4a77166735699400cb18d43672ab31326a83f0b7c2586cc'
+    EnchantedMango:
+       displayName: '&4EnchantedMango'
+       id: 104009
+       growthSpeed: 1
+       growthPerStage: 200
+       stageAmount: 2
+       underBlock: 'GRASS_BLOCK,DIRT'
+       dropAmount: 1
+       hungerFeed: 10.0
+       dropSeedAmount: 2
+       potionEffects:
+          - 'STRENGTH 1000 3'
+       textures:
+          - 'http://textures.minecraft.net/texture/e4895aa67247c3eb406fb905d3f6d35acd660c6f14a85bcf7bfb898b82646e70'
+          - 'http://textures.minecraft.net/texture/7b3b317f9fe632f0d72541b40174c63881a8dcf73e8fc299c2728eb96534347c'
+    Chili:
+       displayName: '&4Chili'
+       id: 104010
+       growthSpeed: 1
+       growthPerStage: 90
+       stageAmount: 2
+       underBlock: 'GRASS_BLOCK,DIRT'
+       dropAmount: 1
+       hungerFeed: 1
+       dropSeedAmount: 2
+       potionEffects:
+          - 'SPEED 200 10'
+       textures:
+          - 'http://textures.minecraft.net/texture/d09972e17307b57fb1cfabceb9097ebc5f5cc26f4e535d83e10753c8844f4257'
+          - 'http://textures.minecraft.net/texture/2d97b2e8f0e1947bda8777da378d7ed378f7f7550bdbc357b76cf44195277291'
+    TropicalFruit:
+       displayName: '&4Tropical Fruit'
+       id: 104011
+       growthSpeed: 1
+       growthPerStage: 60
+       stageAmount: 3
+       underBlock: 'GRASS_BLOCK,DIRT'
+       dropAmount: 1
+       hungerFeed: 6
+       dropSeedAmount: 2
+       potionEffects:
+          - 'null'
+       textures:
+          - 'http://textures.minecraft.net/texture/d2bf14a205f0d6970093ad40773773971f110ad806f9d499e294dc71a1026ab1'
+          - 'http://textures.minecraft.net/texture/6080a53c4c3ecff68eac9cd4ffe66c8cc762dfeb6e5ee0a8fc44dc6eb6a50a3'
+          - 'http://textures.minecraft.net/texture/42bf690d59658df6f150910894132add047acc102cd2ead15ea58c168766ee34'
+    Banana:
+       displayName: '&Banana'
+       id: 104012
+       growthSpeed: 1
+       growthPerStage: 60
+       stageAmount: 2
+       underBlock: 'GRASS_BLOCK,DIRT'
+       dropAmount: 1
+       hungerFeed: 6
+       dropSeedAmount: 2
+       potionEffects:
+          - 'null'
+       textures:
+          - 'http://textures.minecraft.net/texture/4a7129ff89cfd2513bd7c897c3d6a4b2c1b2d99ccf9266aed5af646f7d963ee8'
+          - 'http://textures.minecraft.net/texture/f730e887ff6b0de8534d1b63ad713fee643711646613776d36bac7a4e0c0ae63'
