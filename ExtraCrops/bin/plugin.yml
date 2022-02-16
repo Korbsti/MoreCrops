@@ -1,0 +1,8 @@
+name: MoreCrops
+version: 0.0.1
+description: Adds more crops to your server!
+author: Korbsti
+main: me.korbsti.morecrops.MoreCrops
+api-version: 1.17
+commands:
+    crops:
